@@ -1,1 +1,130 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto Mono;
+}
 
+:root {
+    background-color: #333333;
+    color: #ffffffde;
+    color-scheme: dark;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+#app {
+    height: -webkit-fill-available;
+    /* height: -moz-available;
+    height: 100%; */
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    background-color: #242424;
+}
+
+.list-squares {
+    display: flex;
+    gap: 1rem;
+    /*gap = espaçamento ao lado */
+    justify-content: center;
+    margin-bottom: 2rem;
+    /* 1 rem = 16px */
+}
+
+.square {
+    height: 120px;
+    width: 120px;
+    font-size: 4em;
+    /* tamanho da fonte * 4*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 3px solid #ecc5c5;
+    animation: mudarCor 5s infinite;
+    border-radius: 1rem;
+}
+
+.input {
+    width: 20rem;
+    font-size: 1.5em;
+    border: 3px solid #ecc5c5;
+    border-radius: 5px;
+    animation: mudarCor 5s infinite;
+}
+
+.error{
+    color: #e14444;
+    visibility: hidden;
+}
+
+.btn{
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    background-color: #5a5454;
+    animation: corBotao 5s infinite;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.streak{
+    width: 60px;
+    height: 60px;
+    border: 3px solid #5a5454;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 32px;
+    animation: mudarCores 5s infinite;
+}
+
+.palavras{
+    font-size: 22px;
+    animation: paragrafo 5s infinite;
+    color: #ecc5c5;
+}
+
+@keyframes mudarCor {
+    50%{
+        border: 3px solid #aaa4e2;
+    }
+}
+
+@keyframes mudarCores {
+    50%{
+        border: 3px solid #79e694;
+    }
+}
+
+@keyframes corBotao{
+    50%{
+        background-color: #79e694;
+    }
+}
+
+@keyframes paragrafo {
+    50%{
+        color:#aaa4e2;
+    }
+}
